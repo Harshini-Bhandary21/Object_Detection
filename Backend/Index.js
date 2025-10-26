@@ -21,6 +21,11 @@ app.get("/live", (req, res) => {
     python.stderr.on("data", (data) => {
       console.error(`Error: ${data}`);
     });
-  });
+});
   
+
+app.get('/api/message', (req, res) => {
+    res.send("Hello from backend!");
+});
+
 app.listen(5000, console.log("Server is listening at PORT 5000"));
